@@ -1,7 +1,7 @@
 import os
 import sys
 
-from distutils.core import Command, setup
+from setuptools import setup, Command
 from distutils.command.build_ext import build_ext
 from traceback import print_exc
 
