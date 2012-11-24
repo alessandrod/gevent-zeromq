@@ -144,7 +144,7 @@ class _Poller(_original_Poller):
         xlist = []
 
         for socket, flags in self.sockets.items():
-            if isinstance(socket, _Socket):
+            if hasattr(socket, 'getsockopt'):
                 fd = socket.getsockopt(FD)
             elif isinstance(socket, int):
                 fd = socket
